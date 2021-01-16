@@ -1,0 +1,12 @@
+Preparing the Development Environment
+
+LTS (Long Term Support) for open source version is recommended
+
+1) Download and Install Mongo DB 4.2.11
+https://www.mongodb.com/try/download/community?tck=docs_server
+
+2) Download and Install Node JS 14.15.4
+https://nodejs.org/en/
+
+3) Download and Install YARN Package Manager
+https://classic.yarnpkg.com/en/docs/install#windows-stable

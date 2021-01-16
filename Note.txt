@@ -1,0 +1,12 @@
+React JS
+Node JS => Web Server
+To test and run JAVA Script
+
+npm => node package manager
+
+React CLI -> Tool
+
+npm install --global create-react-app
+npx create-react-app <project-name>
+cd <project-name>
+code . 
