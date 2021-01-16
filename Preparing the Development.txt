@@ -10,3 +10,36 @@ https://nodejs.org/en/
 
 3) Download and Install YARN Package Manager
 https://classic.yarnpkg.com/en/docs/install#windows-stable
+
+MERN Development Required Modules
+
+1) React Module( react, react-dom)
+2) Express Module
+3) MongoDB Module
+
+Development Dependency
+
+1) Babel
+2) Webpack
+3) Nodemon
+
+
+Project Hierarchy
+
+| project-folder/
+ | -- client/
+  | --- HelloWorld.js
+  | --- main.js
+ | -- server/
+  | --- devBundle.js
+  | --- server.js
+ | -- .babelrc
+ | -- nodemon.json
+ | -- package.json
+ | -- template.js
+ | -- webpack.config.client.js
+ | -- webpack.config.client.production.js
+ | -- webpack.config.server.js
+
+
+yarn init
