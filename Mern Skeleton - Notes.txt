@@ -1,0 +1,7 @@
+yarn add express
+yarn add body-parser
+yarn add cookie-parser
+yarn add compression
+yarn add helmet
+yarn add cors
+yarn add mongoose
