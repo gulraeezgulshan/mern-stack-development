@@ -8,7 +8,7 @@ import unicornbikeImg from "./../assets/images/unicornbike.jpg";
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    maxWidth: 600,
+    maxWidth: 800,
     margin: "auto",
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
@@ -34,7 +34,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Home() {
+  //React hook
   const classes = useStyles();
+
   return (
     <Card className={classes.card}>
       <Typography variant="h6" className={classes.title}>
@@ -51,7 +53,7 @@ export default function Home() {
         className={classes.credit}
         color="textSecondary"
       >
-        Sample
+        Photo Credit : Gulraiz Gulshan
       </Typography>
       <CardContent>
         <Typography variant="body1" component="p">

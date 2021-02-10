@@ -19,12 +19,11 @@ const signin = async (req, res) => {
       });
     }
 
-    const token = jwt.sign(
-      {
-        _id: user._id,
-      },
-      config.jwtSecret
-    );
+    const token = jwt.sign({ _id: user._id }, config.jwtSecret, {
+      algorithm: config.jwtAlgorithm,
+    });
+
+    //const token = jwt.sign({ _id: user._id }, config.jwtSecret);
 
     res.cookie("t", token, {
       expire: new Date() + 9999,
@@ -54,7 +53,7 @@ const signout = (req, res) => {
 
 const requireSignin = expressJwt({
   secret: config.jwtSecret,
-  algorithms: ["RS256"],
+  algorithms: ["HS256"],
   userProperty: "auth",
 });
 
