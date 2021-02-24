@@ -3,6 +3,8 @@ const config = {
   port: process.env.PORT || 3000,
   jwtSecret: process.env.JWT_SECRET || "9876543210123456789",
   jwtAlgorithm: "HS256",
+  mongoAtlasUri:
+    "mongodb+srv://gulraiz:10011988@cluster0.6ihvf.mongodb.net/mernproject?retryWrites=true&w=majority",
   mongoUri:
     process.env.MONGODB_URI ||
     process.env.MONGO_HOST ||
