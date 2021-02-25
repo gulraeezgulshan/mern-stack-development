@@ -3,14 +3,19 @@ import Modal from "./Modal";
 import { data } from "../../../data";
 // reducer function
 import { reducer } from "./reducer";
+
 const defaultState = {
   people: [],
   isModalOpen: false,
   modalContent: "",
 };
+
 const Index = () => {
   const [name, setName] = useState("");
   const [state, dispatch] = useReducer(reducer, defaultState);
+
+  // console.log(state);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name) {
@@ -29,6 +34,7 @@ const Index = () => {
       {state.isModalOpen && (
         <Modal closeModal={closeModal} modalContent={state.modalContent} />
       )}
+      {name}
       <form onSubmit={handleSubmit} className="form">
         <div>
           <input

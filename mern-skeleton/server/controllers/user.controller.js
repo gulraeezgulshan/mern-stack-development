@@ -21,6 +21,7 @@ const create = async (req, res) => {
  */
 const userByID = async (req, res, next, id) => {
   try {
+    console.log(User);
     let user = await User.findById(id);
     if (!user)
       return res.status("400").json({
