@@ -27,9 +27,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "right",
     backgroundColor: "#ededed",
     borderBottom: "1px solid #d0d0d0",
-    "& a": {
-      color: "#3f4771",
-    },
   },
 }));
 
@@ -40,7 +37,8 @@ export default function Home() {
   return (
     <Card className={classes.card}>
       <Typography variant="h6" className={classes.title}>
-        Home Page
+        {" "}
+        Home Page{" "}
       </Typography>
       <CardMedia
         className={classes.media}

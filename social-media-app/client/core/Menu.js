@@ -9,36 +9,20 @@ import auth from "./../auth/auth-helper";
 import { Link, withRouter } from "react-router-dom";
 
 const isActive = (history, path) => {
-  if (history.location.pathname == path) return { color: "#ff4081" };
+  if (history.location.pathname == path) return { color: "#ffa726" };
   else return { color: "#ffffff" };
 };
-
 const Menu = withRouter(({ history }) => (
   <AppBar position="static">
     <Toolbar>
       <Typography variant="h6" color="inherit">
-        MERN Skeleton
+        MERN Social
       </Typography>
       <Link to="/">
         <IconButton aria-label="Home" style={isActive(history, "/")}>
           <HomeIcon />
         </IconButton>
       </Link>
-      <Link to="/users">
-        <Button style={isActive(history, "/users")}>Users</Button>
-      </Link>
-      {auth.isAuthenticated() && (
-        <Link to={"/employees/" + auth.isAuthenticated().user._id}>
-          <Button style={isActive(history, "/employees")}>Employees</Button>
-        </Link>
-      )}
-      {auth.isAuthenticated() && (
-        <Link to="/employee/create">
-          <Button style={isActive(history, "/employee/create")}>
-            Create Employee
-          </Button>
-        </Link>
-      )}
       {!auth.isAuthenticated() && (
         <span>
           <Link to="/signup">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./core/Home";
 import Users from "./user/Users";
@@ -8,8 +8,6 @@ import EditProfile from "./user/EditProfile";
 import Profile from "./user/Profile";
 import PrivateRoute from "./auth/PrivateRoute";
 import Menu from "./core/Menu";
-import CreateEmployee from "./employee/CreateEmployee";
-import Employees from "./employee/Employees";
 
 const MainRouter = () => {
   return (
@@ -22,8 +20,6 @@ const MainRouter = () => {
         <Route path="/signin" component={Signin} />
         <PrivateRoute path="/user/edit/:userId" component={EditProfile} />
         <Route path="/user/:userId" component={Profile} />
-        <PrivateRoute path="/employee/create" component={CreateEmployee} />
-        <PrivateRoute path="/employees/:userId" component={Employees} />
       </Switch>
     </div>
   );
